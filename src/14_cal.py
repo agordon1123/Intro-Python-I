@@ -22,3 +22,20 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+def py_cal():
+  print("Command line calendar: 14_cal.py OPTIONS: [month: int] [year: int] ")
+  sys.exit()
+
+args = sys.argv
+x = datetime.now()
+
+try:
+  if len(args) == 1:
+    print(calendar.month(x.year, x.month))
+  elif len(args) == 2:
+    print(calendar.month(x.year, int(args[1])))
+  elif len(args) == 3:
+    print(calendar.month(int(args[2]), int(args[1])))
+except:
+  py_cal()
