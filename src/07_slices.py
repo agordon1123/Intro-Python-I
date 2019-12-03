@@ -25,15 +25,13 @@ print(a[3:])
 
 # Output the two middle elements in the array: [1, 7]
 
-# 1: Trying to solve if list is mutated
-upperindex = int(len(a) / 2) + 1
-print(upperindex)
-lowerindex = upperindex -1
-print(lowerindex)
-print(a[lowerindex:upperindex + 1])
+def print_middle(arr):
+    if len(arr) % 2:
+        print(arr[len(arr) // 2])
+    else:
+        print(arr[len(arr) // 2 - 1 : len(arr) // 2 + 1])
 
-# 2: Simply solving the request
-print(a[3:5])
+print_middle(a)
 
 # Output every element except the first one: [4, 1, 7, 9, 6]
 print(a[1:])

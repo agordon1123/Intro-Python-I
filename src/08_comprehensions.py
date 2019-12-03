@@ -10,21 +10,14 @@ for more info regarding list comprehensions.
 
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
-y = []
-
-for i in range(6):
-    if i > 0:
-        y.append(i)
+y = [num for num in range(6) if num != 0]
 
 print (y)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 
-y = []
-
-for i in range(10):
-    y.append(i * i * i)
+y = [num ** 3 for num in range(10)]
 
 print(y)
 
@@ -33,10 +26,7 @@ print(y)
 
 a = ["foo", "bar", "baz"]
 
-y = []
-
-for i in a:
-    y.append(i.upper())
+y = [word.upper() for word in a]
 
 print(y)
 
